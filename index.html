@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<!--
+File: index.html
+
+GUI Assignment: HW4
+
+Created by: Hunter Spadafora, hunter_spadafora@student.uml.edu
+Created on: 6/15/2022
+
+Description:
+This is the HTML code for GUI1 HW4
+
+Copyright (c) 2022 by Hunter Spadafora. All rights reserved.
+May be freely copied or excerpted for educational purposes with credit
+to the author.
+Most recent update by HZS on 6/25/2022
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="GUI1 HW4 webpage for submission.">
+        <meta name="author" content="Hunter Spadafora">
+        <meta name="creator" content="Hunter Spadafora">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>GUI1 HW4 - Multiplication Table</title>
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Jquery validate plugin -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+        <!-- Jquery UI -->
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+        <!-- Required CSS for Jquery UI -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Multiplication Table</h1>
+            <p id="welcome">Enter four numbers and a multiplication table will be generated.</p>
+            <p id="limit">(<span>The limit is within the range -50 to 50</span>)</p>
+        </header>
+
+        <form>
+            <fieldset>
+                <p>
+                    <label for="left">Leftmost Horizontal</label>
+                    <input type="number" name="left" id="left" min="-50" max="50" required autofocus>
+                    <div id="left_slider" class="slider"></div>
+                </p>
+                <p>
+                    <label for="right">Rightmost Horizontal</label>
+                    <input type="number" name="right" id="right" min="-50" max="50" required>
+                    <div id="right_slider" class="slider"></div>
+                </p>
+                <p>
+                    <label for="top">Topmost Verticle</label>
+                    <input type="number" name="top" id="top" min="-50" max="50" required>
+                    <div id="top_slider" class="slider"></div>
+                </p>
+                <p>
+                    <label for="bottom">Bottom Verticle</label>
+                    <input type="number" name="bottom" id="bottom" min="-50" max="50" required>
+                    <div id="bottom_slider" class="slider"></div>
+                </p>
+                <p>
+                    <input type="button" value="Submit" id="submit">
+                </p>
+            </fieldset>
+        </form>
+
+        <div id="tabs">
+            <ul>
+
+            </ul>
+                <!-- Multiplication table will be generated here -->
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

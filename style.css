@@ -1,0 +1,199 @@
+﻿/*
+File: style.css
+
+GUI Assignment: HW4
+
+Created by: Hunter Spadafora, hunter_spadafora@student.uml.edu
+Created on: 6/15/2022
+
+Description:
+This is the CSS code for GUI1 HW4
+
+Copyright (c) 2022 by Hunter Spadafora. All rights reserved.
+May be freely copied or excerpted for educational purposes with credit
+to the author.
+Most recent update by HZS on 6/25/2022
+*/
+
+/* body is where color variables will be defined */
+body {
+    --color-ten: rgb(174, 255, 158);
+    --color-one: rgb(240, 255, 158);
+    --color-two: rgb(255, 216, 158);
+    --color-three: rgb(255, 158, 158);
+    --color-four: rgb(255, 158, 231);
+    --color-five: rgb(216, 158, 255);
+    --color-six: rgb(168, 158, 255);
+    --color-seven: rgb(158, 197, 255);
+    --color-eight: rgb(158, 252, 255);
+    --color-nine: rgb(158, 255, 210);
+
+    background-color: antiquewhite;
+    box-sizing: border-box;
+
+    /* Grid layout will be used to reduce scrolling of the main body and
+    instead the only scrolling should be of the multiplication table. */
+    display: grid;
+    height: 98vh;
+    row-gap: 0%;
+    grid-auto-rows: auto;
+}
+
+p {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+/* header ----------------------------------------------------------- */
+header {
+    grid-row: 1 / span 1;
+}
+
+h1 {
+    text-align: center;
+}
+
+p#welcome {
+    font-size: 1.1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    text-align: center;
+}
+
+p#limit {
+    font-size: 1em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Form ------------------------------------------------------------- */
+form {
+    grid-row: 2 / span 1;
+}
+
+fieldset {
+    padding-bottom: 0em;
+    padding-top: 0em;
+    /* text-align: center; */
+}
+
+input {
+    background-color: rgb(255, 230, 89);
+    font-family: monospace;
+    font-size: 1em;
+}
+
+label {
+    font-size: 1em;
+}
+
+.slider {
+    width: 15em;
+}
+
+/* Submit button ---------------------------------------------------- */
+input#submit {
+    border: 0.4em outset gray;
+    border-radius: 0.75em;
+}
+
+input#submit:hover {
+    background-color: rgb(248, 76, 76);
+    font-weight: bold;
+    border: 0.4em outset gray;
+}
+
+/* This allows the User to know if they "tabbed" onto the button if they
+are using keyboard only and no mouse. */
+input#submit:focus {
+    border: 0.4em solid black;
+}
+
+/* When the submit button is clicked.  This gives the user feedback
+letting them know the button has been clicked. */
+input#submit:active {
+    border: 0.4em dashed black;
+    font-style: italic;
+}
+
+/* Validation errors ------------------------------------------------ */
+label.error {
+    color: red;
+    margin: 0.5em;
+}
+
+input.error {
+    color: red;
+    background-color: pink;
+    border: red dashed inherit;
+}
+
+
+/* Tabs ------------------------------------------------------------- */
+.ui-tabs .ui-tabs-nav li {
+    border: 0.1em outset black;
+    margin: 0.1em;
+    overflow: auto;
+}
+
+/* table ------------------------------------------------------------ */
+div#tabs {
+    background: none;
+    overflow: auto;
+    height: auto;
+    box-sizing: border-box;
+    grid-row-start: 3;
+    min-height: 22em;
+}
+
+div#tabs div {
+    background: none;
+    /* overflow: auto; */
+    height: auto;
+    box-sizing: border-box;
+    height: inherit;
+}
+
+table {
+    border-spacing: 0em;
+    table-layout: fixed;
+    box-sizing: border-box;
+}
+
+th, td {
+    border: 0.2em solid black;
+    padding: 0.8em;
+    font-family: monospace;
+    text-align: center;
+}
+
+th {
+    color: white;
+    background-color: black;
+    border: outset gray 0.4em;
+}
+
+td.one {background-color: var(--color-one);}
+td.two {background-color: var(--color-two);}
+td.three {background-color: var(--color-three);}
+td.four {background-color: var(--color-four);}
+td.five {background-color: var(--color-five);}
+td.six {background-color: var(--color-six);}
+td.seven {background-color: var(--color-seven);}
+td.eight {background-color: var(--color-eight);}
+td.nine {background-color: var(--color-nine);}
+td.ten {background-color: var(--color-ten);}
+
+th.one {color: var(--color-one);}
+th.two {color: var(--color-two);}
+th.three {color: var(--color-three);}
+th.four {color: var(--color-four);}
+th.five {color: var(--color-five);}
+th.six {color: var(--color-six);}
+th.seven {color: var(--color-seven);}
+th.eight {color: var(--color-eight);}
+th.nine {color: var(--color-nine);}
+th.ten {color: var(--color-ten);}
